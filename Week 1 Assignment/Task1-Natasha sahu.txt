@@ -1,0 +1,183 @@
+Question no.1-
+#include<iostream>
+using namespace std;
+int main(){
+    for(int i=1;i<=100;i++){
+      if(i%5==0 && i%3==0){
+            cout <<"FizzBuzz" << endl;
+        }
+         else if(i % 3 == 0){
+            cout <<"Fizz" << endl;
+        }
+        else if(i%5==0){
+            cout <<"Buzz" << endl;
+        }
+      
+        else
+        cout << i << endl;
+        
+    }
+}
+
+Question no.2-
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b,c;
+    cout <<"Enter the three sides of a triangle";
+   cin >> a >> b >> c;
+   cout << a<<endl<< b<<endl<< c<<endl;
+   if(a+b>c && b+c>a && c+a>b){
+     if(a==b && b==c)
+     cout <<"equilateral triangle" <<endl;
+     else if(a==b || b==c ||c==a)
+     cout <<"isosceles triangle"<<endl;
+     else
+     cout <<"scalene"<< endl;
+   }
+   else
+   cout <<"Triangle formation is not possible";
+}
+
+Question no.3-
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n,a=0;
+    int rem;
+    cout <<"Enter a number" <<endl;
+    cin >> n;
+    if(n==0){
+        cout <<"The largest digit is 0";
+    }
+   while(n>0){
+        rem=n%10;
+        if(rem>=a){
+            a=rem;
+        }
+        n/=10;
+   }
+    cout << a;
+}
+
+
+Question no.4-
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout <<"Enter a decimal number";
+    cin >> n;
+    int binary[32],i=0,num=n;
+    while(num>0){
+        binary[i++]=num%2;
+        num/=2;
+    }
+    int octal[32],j=0;
+    num=n;
+    while(num>0){
+        octal[j++]=num%8;
+        num/=8;
+    }
+    cout <<"Binary";
+    for(int k=i-1;k>=0;k--){
+        cout <<binary[k];
+    }
+cout <<endl;
+cout <<"Octal";
+    for(int k=j-1;k>=0;k--){
+        cout <<octal[k];
+    }
+    cout <<endl;
+
+}
+
+Question no.-5
+
+//perfect square
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout <<"Enter a number";
+    cin >> n;
+    int n1=n;
+    if(n==0 || n==1)
+    cout <<"perfect square number";
+    else if(n>0){
+    for(int i=1;i<=n1/2;i++)
+        if(i*i==n){
+        cout <<"perfect  square number\n";
+        break;
+}
+        else if(i*i>n){
+            cout <<"not perfect square number\n ";
+         break;}
+ }
+ else {
+    cout <<"invalid input";}
+}
+
+
+Question no.-6
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout <<"Enter the number of line";
+    cin >> n;
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
+            for(int k=1;k<=i;k++)
+         
+        cout << j;
+        }
+        cout <<endl;
+    }
+
+}
+
+Question no.-7
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout <<"Enter the number of line";
+    cin >> n;
+    int c=1;
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
+           printf("%d*",c);
+           c++;
+}cout <<endl;
+}
+}
+
+
+Question no.-8
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout <<"Enter the number of line";
+    cin >> n;
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=i;j++){
+            cout << j;
+        }
+        for(int k=1;k<=2*(n-i);k++){
+            cout <<" "; 
+        }
+        for(int j=i;j>=1;j--){
+            cout << j;
+        }
+        cout <<endl;
+    }
+    
+
+
+}
+
