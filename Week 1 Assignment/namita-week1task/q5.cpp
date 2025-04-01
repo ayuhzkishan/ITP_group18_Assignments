@@ -1,15 +1,22 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main() {
-    int num;
-    cout << "Enter a number: ";
-    cin >> num;
-    
-    for (int i = 1; i * i <= num; i++) {
-        if (i * i == num) {
-            cout << num << " is a perfect square" << endl;
-        }
-    }
-
-    cout << num << " is not a perfect square." << endl;
-    }
+int main(){
+    int n;
+    cout <<"Enter a number";
+    cin >> n;
+    int n1=n;
+    if(n==0 || n==1)
+    cout <<"perfect square number";
+    else if(n>0){
+    for(int i=1;i<=n1/2;i++)
+        if(i*i==n){
+        cout <<"perfect  square number\n";
+        break;
+}
+        else if(i*i>n){
+            cout <<"not perfect square number\n ";
+         break;}
+ }
+ else {
+    cout <<"invalid input";}
+}
