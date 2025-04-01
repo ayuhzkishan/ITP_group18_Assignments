@@ -7,8 +7,12 @@ int main(){
     int c=1;
     for(int i=1;i<=n;i++){
         for(int j=1;j<=n;j++){
-           printf("%d*",c);
+           printf("%d",c);
+           if(j<=n-1){
+            cout <<"*";
+           }
            c++;
-}cout <<endl;
+}
+cout <<endl;
 }
 }
